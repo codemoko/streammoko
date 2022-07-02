@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Y0DdwkBOAJuFShFqJqSBKj2NzlVUamhoIh41EQukR4c=",
+  "Hash": "/lnTG3QwqZUgCOM+eCXeXT8+Tkk1sozuRHa9KwGxq3g=",
   "Source": "WorkerTest",
   "BasePath": "/",
   "Mode": "Root",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\6.0.6\\staticwebassets\\AuthenticationService.js",
+      "SourceId": "Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\6.0.6\\staticwebassets\\",
+      "BasePath": "_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "RelativePath": "AuthenticationService.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\6.0.6\\staticwebassets\\AuthenticationService.js"
+    },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.boot.json",
       "SourceId": "WorkerTest",
@@ -184,7 +201,24 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.4\\lib\\net6.0\\Microsoft.AspNetCore.Authorization.dll"
+      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.6\\lib\\net6.0\\Microsoft.AspNetCore.Authorization.dll"
+    },
+    {
+      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
+      "SourceId": "WorkerTest",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\6.0.6\\lib\\net6.0\\Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
@@ -201,7 +235,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.4\\lib\\net6.0\\Microsoft.AspNetCore.Components.dll"
+      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.6\\lib\\net6.0\\Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
@@ -218,7 +252,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.4\\lib\\net6.0\\Microsoft.AspNetCore.Components.Forms.dll"
+      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.6\\lib\\net6.0\\Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll",
@@ -235,7 +269,24 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.4\\lib\\net6.0\\Microsoft.AspNetCore.Components.Web.dll"
+      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.6\\lib\\net6.0\\Microsoft.AspNetCore.Components.Web.dll"
+    },
+    {
+      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll",
+      "SourceId": "WorkerTest",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\6.0.6\\lib\\net6.0\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.dll",
@@ -269,7 +320,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.4\\lib\\net6.0\\Microsoft.AspNetCore.Metadata.dll"
+      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.6\\lib\\net6.0\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.CSharp.dll",
@@ -459,6 +510,23 @@
       "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\6.0.0\\lib\\net6.0\\Microsoft.Extensions.FileSystemGlobbing.dll"
     },
     {
+      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Http.dll",
+      "SourceId": "WorkerTest",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Http.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.extensions.http\\6.0.0\\lib\\netstandard2.0\\Microsoft.Extensions.Http.dll"
+    },
+    {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll",
       "SourceId": "WorkerTest",
       "SourceType": "Computed",
@@ -541,7 +609,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.jsinterop\\6.0.4\\lib\\net6.0\\Microsoft.JSInterop.dll"
+      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\microsoft.jsinterop\\6.0.6\\lib\\net6.0\\Microsoft.JSInterop.dll"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.dll",
@@ -1510,7 +1578,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\system.io.pipelines\\6.0.2\\lib\\net6.0\\System.IO.Pipelines.dll"
+      "OriginalItemSpec": "C:\\Users\\azmau\\.nuget\\packages\\system.io.pipelines\\6.0.3\\lib\\net6.0\\System.IO.Pipelines.dll"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipes.AccessControl.dll",
@@ -3451,6 +3519,23 @@
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Memory.dll"
     },
     {
+      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\+b2Uaoxz.gz",
+      "SourceId": "WorkerTest",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.JSInterop.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll"
+    },
+    {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\+DkFL7Y7.gz",
       "SourceId": "WorkerTest",
       "SourceType": "Computed",
@@ -3517,23 +3602,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Linq.Queryable.dll"
-    },
-    {
-      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\+oJmlMPO.gz",
-      "SourceId": "WorkerTest",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.JSInterop.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\+sWx69X8.gz",
@@ -3638,6 +3706,23 @@
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt_CJK.dat"
     },
     {
+      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\1EDbSdqR.gz",
+      "SourceId": "WorkerTest",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Http.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Http.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Http.dll"
+    },
+    {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\1GG1PcmY.gz",
       "SourceId": "WorkerTest",
       "SourceType": "Computed",
@@ -3687,6 +3772,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Collections.dll"
+    },
+    {
+      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\2++zRSC7.gz",
+      "SourceId": "WorkerTest",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\27A0C1iC.gz",
@@ -3740,6 +3842,23 @@
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Text.Json.dll"
     },
     {
+      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\2kPbjils.gz",
+      "SourceId": "WorkerTest",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Web.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll"
+    },
+    {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\3QrmdUcM.gz",
       "SourceId": "WorkerTest",
       "SourceType": "Computed",
@@ -3789,6 +3908,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Xml.Serialization.dll"
+    },
+    {
+      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\47hx1Sw2.gz",
+      "SourceId": "WorkerTest",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\57CT7vmE.gz",
@@ -4061,23 +4197,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Xml.XPath.XDocument.dll"
-    },
-    {
-      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\7RY9Sav5.gz",
-      "SourceId": "WorkerTest",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\7zBhkEv0.gz",
@@ -4420,40 +4539,6 @@
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.WebHeaderCollection.dll"
     },
     {
-      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\c5Qu1fYS.gz",
-      "SourceId": "WorkerTest",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
-    },
-    {
-      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\CAAQsAI4.gz",
-      "SourceId": "WorkerTest",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll"
-    },
-    {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\cC5venDx.gz",
       "SourceId": "WorkerTest",
       "SourceType": "Computed",
@@ -4486,6 +4571,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Runtime.Extensions.dll"
+    },
+    {
+      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\djVxkS4e.gz",
+      "SourceId": "WorkerTest",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\dlJAeZ8m.gz",
@@ -4828,6 +4930,23 @@
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Drawing.dll"
     },
     {
+      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\gfIz2XgT.gz",
+      "SourceId": "WorkerTest",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Forms.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll"
+    },
+    {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\ghpc6ba9.gz",
       "SourceId": "WorkerTest",
       "SourceType": "Computed",
@@ -4911,23 +5030,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.ComponentModel.DataAnnotations.dll"
-    },
-    {
-      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\ha+cNWVk.gz",
-      "SourceId": "WorkerTest",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Forms.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\Hm8KMBeW.gz",
@@ -5338,6 +5440,23 @@
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Threading.Thread.dll"
     },
     {
+      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\m33Vf7gs.gz",
+      "SourceId": "WorkerTest",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll"
+    },
+    {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\MCvJAP2r.gz",
       "SourceId": "WorkerTest",
       "SourceType": "Computed",
@@ -5508,23 +5627,6 @@
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.Abstractions.dll"
     },
     {
-      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\nyaDeh+Q.gz",
-      "SourceId": "WorkerTest",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Web.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll"
-    },
-    {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\o8YhW8j4.gz",
       "SourceId": "WorkerTest",
       "SourceType": "Computed",
@@ -5659,6 +5761,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.ComponentModel.TypeConverter.dll"
+    },
+    {
+      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\PckLCvxr.gz",
+      "SourceId": "WorkerTest",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\pqTpBKFP.gz",
@@ -5897,6 +6016,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Diagnostics.Debug.dll"
+    },
+    {
+      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\RdzoxPzB.gz",
+      "SourceId": "WorkerTest",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.IO.Pipelines.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\RHMlD+e9.gz",
@@ -6545,23 +6681,6 @@
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.FileSystem.Primitives.dll"
     },
     {
-      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\x5F8JRJk.gz",
-      "SourceId": "WorkerTest",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/System.IO.Pipelines.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll"
-    },
-    {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\build-gz\\X8A6lsyG.gz",
       "SourceId": "WorkerTest",
       "SourceType": "Computed",
@@ -6832,6 +6951,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WorkerTest.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\wwwroot\\appsettings.json",
+      "SourceId": "WorkerTest",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "appsettings.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "settings",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\appsettings.json"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\wwwroot\\css\\app.css",

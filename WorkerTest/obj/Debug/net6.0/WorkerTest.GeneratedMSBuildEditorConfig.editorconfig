@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Desktop/stream-moko-core/WorkerTest/WorkerTest/Pages/Authentication.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Desktop/stream-moko-core/WorkerTest/WorkerTest/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Desktop/stream-moko-core/WorkerTest/WorkerTest/Pages/Player.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxheWVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Desktop/stream-moko-core/WorkerTest/WorkerTest/Shared/AccessControl.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEFjY2Vzc0NvbnRyb2wucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Desktop/stream-moko-core/WorkerTest/WorkerTest/Shared/SurveyPrompt.razor]

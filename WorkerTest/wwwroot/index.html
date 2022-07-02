@@ -20,6 +20,40 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script src='https://embed.videodelivery.net/embed/sdk.latest.js'></script>
+    <script type="text/javascript">
+        "use strict";
+        function tryLoadPlayer() {
+            const streamPlayerElement = document.getElementById("stream-player");
+            const playerCurtainElement = document.getElementById("player-curtain");
+
+            if (streamPlayerElement && playerCurtainElement) {
+                const player = Stream(document.getElementById("stream-player"));
+                const playerCurtain = document.getElementById("player-curtain");
+                setPlayerSize();
+                window.addEventListener('resize', function (event) {
+                    setPlayerSize();
+                }, false);
+                player.addEventListener("play", () => {
+                    console.log("playing!");
+                    setInterval(function () {
+                        // console.log(`player @ ${player.currentTime}`);
+                    });
+                });
+                player.play().catch(() => {
+                    console.log("playback failed, muting to try again");
+                    player.muted = true;
+                    player.play();
+                });
+                function setPlayerSize() {
+                    document.getElementById("stream-player").width = document.body.clientWidth;
+                    document.getElementById("stream-player").height = document.body.clientHeight;
+                    playerCurtain.classList.remove("hide");
+                }
+            }
+        }
+
+    </script>
 </body>
 
 </html>

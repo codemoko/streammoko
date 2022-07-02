@@ -1,0 +1,18 @@
+﻿@page "/player"
+@inject IJSRuntime jsRuntime
+
+<h3>Player</h3>
+<div id="player-curtain" class="hide">
+  <iframe
+  src="https://iframe.videodelivery.net/4000e352c84d5f2b7a3e863dc485c777"
+  style="border: none; width: 800px;"
+  preload=""
+  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+  allowfullscreen="true"
+  id="stream-player"
+></iframe>
+</div>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender) => await jsRuntime.InvokeVoidAsync("tryLoadPlayer");
+}

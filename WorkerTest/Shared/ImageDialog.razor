@@ -1,0 +1,16 @@
+﻿<MudDialog>
+    <DialogContent>
+       <MudImage Style="overflow: auto;" Fluid="true" Src="@ImageUrl" Alt="Swedish Farm House" Class="rounded-lg"/>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" OnClick="Submit">Ok</MudButton>
+    </DialogActions>
+</MudDialog>
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    [Parameter] public string ImageUrl { get; set; }
+
+    void Submit() => MudDialog.Close(DialogResult.Ok(true));
+    void Cancel() => MudDialog.Cancel();
+}

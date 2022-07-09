@@ -46,6 +46,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEFjY2Vzc0NvbnRyb2wucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Desktop/stream-moko-core/WorkerTest/WorkerTest/Shared/ImageDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEltYWdlRGlhbG9nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Desktop/stream-moko-core/WorkerTest/WorkerTest/Shared/Slider.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNsaWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Desktop/stream-moko-core/WorkerTest/WorkerTest/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

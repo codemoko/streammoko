@@ -825,3 +825,11 @@ D:\Desktop\stream-moko-core\WorkerTest\WorkerTest\obj\Debug\net6.0\build-gz\m33V
 D:\Desktop\stream-moko-core\WorkerTest\WorkerTest\obj\Debug\net6.0\build-gz\1EDbSdqR.gz
 D:\Desktop\stream-moko-core\WorkerTest\WorkerTest\obj\Debug\net6.0\build-gz\+b2Uaoxz.gz
 D:\Desktop\stream-moko-core\WorkerTest\WorkerTest\obj\Debug\net6.0\build-gz\RdzoxPzB.gz
+D:\Desktop\stream-moko-core\WorkerTest\WorkerTest\bin\Debug\net6.0\wwwroot\_framework\Newtonsoft.Json.dll
+D:\Desktop\stream-moko-core\WorkerTest\WorkerTest\bin\Debug\net6.0\wwwroot\_framework\Newtonsoft.Json.dll.gz
+D:\Desktop\stream-moko-core\WorkerTest\WorkerTest\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Desktop\stream-moko-core\WorkerTest\WorkerTest\obj\Debug\net6.0\build-gz\OelMG+3Q.gz
+D:\Desktop\stream-moko-core\WorkerTest\WorkerTest\bin\Debug\net6.0\wwwroot\_framework\MudBlazor.dll
+D:\Desktop\stream-moko-core\WorkerTest\WorkerTest\bin\Debug\net6.0\wwwroot\_framework\MudBlazor.dll.gz
+D:\Desktop\stream-moko-core\WorkerTest\WorkerTest\bin\Debug\net6.0\MudBlazor.dll
+D:\Desktop\stream-moko-core\WorkerTest\WorkerTest\obj\Debug\net6.0\build-gz\knHogOPF.gz

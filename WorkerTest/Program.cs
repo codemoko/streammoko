@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using MudBlazor.Services;
 using WorkerTest;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -14,5 +15,7 @@ builder.Services.AddOidcAuthentication(options =>
     options.ProviderOptions.ResponseType = "code";
     options.ProviderOptions.AdditionalProviderParameters.Add("audience", builder.Configuration["Auth0:Audience"]);
 });
+
+builder.Services.AddMudServices();
 
 await builder.Build().RunAsync();

@@ -1,0 +1,63 @@
+﻿@inject IDialogService DialogService
+<MudForm>
+    <MudTextField T="string" Label="Multiline" Variant="Variant.Text" @bind-Text="Base64data" Lines="5" />
+    <MudButton OnClick="TrySetSlider" Variant="Variant.Filled">Default</MudButton>
+</MudForm>
+
+@if (!string.IsNullOrEmpty(Base64data))
+{
+    <Slider Slide="Slide" />
+}
+
+@if (Slide != null)
+{
+    <h3>@Slide.Name</h3>
+    <MudStack id="mud-stack" Style="overflow-x: auto" Row="true">
+        @foreach (string x in Slide.Links)
+        {
+            <MudPaper>
+                <MudCard Style="width: 400px">
+                    <MudCardMedia @onclick="() => OpenDialog(x)" Image="@x" Height="600" />
+                    <MudCardContent>
+                        <MudText Typo="Typo.h5">Old Paint</MudText>
+                        <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
+                        <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
+                        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudPaper>
+        }
+    </MudStack>
+}
+
+@code {
+    [Parameter] public Objects.Slider Slide { get; set; } = new Objects.Slider { };
+
+    public string Base64data { get; set; }
+
+    private void OpenDialog(string url)
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        var parms = new DialogParameters();
+        parms.Add("ImageUrl", url);
+        DialogService.Show<ImageDialog>("Simple Dialog", parms);
+    }
+
+    public void TrySetSlider()
+    {
+        if (string.IsNullOrEmpty(Slide.Base64))
+        {
+            try
+            {
+                Slide = Objects.Slider.DecodeSlider(Base64data);
+            }
+            catch (Exception ex)
+            {
+                Base64data = ex.Message;
+            }
+        }
+    }
+}

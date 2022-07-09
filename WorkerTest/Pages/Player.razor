@@ -1,19 +1,68 @@
 ﻿@page "/player"
 @inject IJSRuntime jsRuntime
 @attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject IAccessTokenProvider TokenProvider
+@using Microsoft.AspNetCore.Components.Authorization
+@inject SignOutSessionStateManager SignOutManager
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Newtonsoft.Json
+@using System.Text
 
+<AuthorizeView>
+    <Authorized>
+        @{
+            var user = @context.User.Identity.Name;
+        }
+        Hello, @user!
+        <div id="player-curtain" class="hide">
+            <iframe src="https://iframe.videodelivery.net/4000e352c84d5f2b7a3e863dc485c777"
+                    style="border: none; width: 800px;"
+                    preload=""
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen="true"
+                    id="stream-player"></iframe>
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        <a href="authentication/login">Log in</a>
+    </NotAuthorized>
+</AuthorizeView>
 <h3>Player</h3>
-<div id="player-curtain" class="hide">
-  <iframe
-  src="https://iframe.videodelivery.net/4000e352c84d5f2b7a3e863dc485c777"
-  style="border: none; width: 800px;"
-  preload=""
-  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-  allowfullscreen="true"
-  id="stream-player"
-></iframe>
-</div>
 
 @code {
+    public class HelloWorld
+    {
+        public string hello { get; set; }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var tokenResult = await TokenProvider.RequestAccessToken(new AccessTokenRequestOptions{Scopes = new List<string>{"openid", "profile"}});
+        tokenResult.TryGetToken(out var token);
+        if (!string.IsNullOrEmpty(token?.Value))
+        {
+            var target = $"https://mokowebhooks.azurewebsites.net/api/MokoWebHooks";
+            try
+            {
+                var responseBody = JsonConvert.SerializeObject(new { Token = token.Value });
+                responseBody = Convert.ToBase64String(Encoding.UTF8.GetBytes(responseBody));
+                var result = await Http.PostAsJsonAsync(target, responseBody);
+
+                var test = await new StreamReader(result.Content.ReadAsStream()).ReadToEndAsync();
+                var done = false;
+            }
+            catch(Exception ex)
+            {
+                var exMess = ex.Message;
+                var notdone = false;
+            }
+            //var ansy = await Http.GetFromJsonAsync<HelloWorld>(target);
+            //var pantsy = false;
+
+        }
+
+    }
     protected override async Task OnAfterRenderAsync(bool firstRender) => await jsRuntime.InvokeVoidAsync("tryLoadPlayer");
 }

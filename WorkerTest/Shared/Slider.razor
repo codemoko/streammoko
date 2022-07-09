@@ -1,13 +1,4 @@
 ﻿@inject IDialogService DialogService
-<MudForm>
-    <MudTextField T="string" Label="Multiline" Variant="Variant.Text" @bind-Text="Base64data" Lines="5" />
-    <MudButton OnClick="TrySetSlider" Variant="Variant.Filled">Default</MudButton>
-</MudForm>
-
-@if (!string.IsNullOrEmpty(Base64data))
-{
-    <Slider Slide="Slide" />
-}
 
 @if (Slide != null)
 {
@@ -36,8 +27,6 @@
 @code {
     [Parameter] public Objects.Slider Slide { get; set; } = new Objects.Slider { };
 
-    public string Base64data { get; set; }
-
     private void OpenDialog(string url)
     {
         var options = new DialogOptions { CloseOnEscapeKey = true };
@@ -46,18 +35,5 @@
         DialogService.Show<ImageDialog>("Simple Dialog", parms);
     }
 
-    public void TrySetSlider()
-    {
-        if (string.IsNullOrEmpty(Slide.Base64))
-        {
-            try
-            {
-                Slide = Objects.Slider.DecodeSlider(Base64data);
-            }
-            catch (Exception ex)
-            {
-                Base64data = ex.Message;
-            }
-        }
-    }
+    
 }

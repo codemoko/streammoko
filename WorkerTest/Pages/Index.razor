@@ -9,4 +9,31 @@ Welcome to your new app.
 <SurveyPrompt Title="How is Blazor working for you?" />
 *@
 
-<Slider></Slider>
+<MudForm>
+    <MudTextField T="string" Label="Multiline" Variant="Variant.Text" @bind-Text="Base64data" Lines="5" />
+    <MudButton OnClick="TrySetSlider" Variant="Variant.Filled">Default</MudButton>
+</MudForm>
+@if (!string.IsNullOrEmpty(Base64data) && Slide != null)
+{
+    <Slider Slide="Slide" />
+}
+
+@code {
+    public string Base64data { get; set; }
+    public Objects.Slider Slide { get; set; }
+
+    public void TrySetSlider()
+    {
+        if (!string.IsNullOrEmpty(Base64data))
+        {
+            try
+            {
+                Slide = Objects.Slider.DecodeSlider(Base64data);
+            }
+            catch (Exception ex)
+            {
+                Base64data = ex.Message;
+            }
+        }
+    }
+}

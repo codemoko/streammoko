@@ -1,13 +1,6 @@
 ﻿@page "/"
 
 <PageTitle>Index</PageTitle>
-@*
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
-*@
 
 <MudForm>
     <MudTextField T="string" Label="Multiline" Variant="Variant.Text" @bind-Text="Base64data" Lines="5" />
@@ -17,6 +10,8 @@ Welcome to your new app.
 {
     <Slider Slide="Slide" />
 }
+
+<UploadFile />
 
 @code {
     public string Base64data { get; set; }
@@ -36,4 +31,6 @@ Welcome to your new app.
             }
         }
     }
+
+    
 }

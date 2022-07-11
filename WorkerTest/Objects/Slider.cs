@@ -9,6 +9,11 @@ namespace WorkerTest.Objects
 
         public Slider(){}
 
+        public Slider(CloudflareImageResponse cloudflareImageResponse)
+        {
+            Links = cloudflareImageResponse.Result.Images.Select(x => x.Variants[0]).ToList();
+        }
+
         public static Slider DecodeSlider(string base64Str)
         {
             byte[] data = Convert.FromBase64String(base64Str);

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qT0kSr2Evt+b2Gse685mV4eVMIw5YF2QpCruKWdtZak=",
+  "Hash": "ydFh4L+IObyjq/QWbRqUkE8BVsMJBO+GCZySPgnnVbk=",
   "Source": "WorkerTest",
   "BasePath": "/",
   "Mode": "Root",
@@ -7325,6 +7325,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\wwwroot\\MOKO.png",
+      "SourceId": "WorkerTest",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "MOKO.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MOKO.png"
     },
     {
       "Identity": "D:\\Desktop\\stream-moko-core\\WorkerTest\\WorkerTest\\wwwroot\\sample-data\\weather.json",

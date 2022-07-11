@@ -31,14 +31,9 @@
 
 
 <MudLayout>
-    <MudAppBar>
-        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
-        My Application
-        <AccessControl />
-    </MudAppBar>
+    <NavMenu Links="Links" />
     <MudDrawer @bind-Open="@_drawerOpen"></MudDrawer>
     <MudMainContent>
-        
         @Body
     </MudMainContent>
 </MudLayout>
@@ -48,8 +43,14 @@
     bool _drawerOpen = false;
     bool _isDarkMode = true;
 
-    void DrawerToggle()
+    private List<string[]> Links = new List<string[]>
     {
-        _drawerOpen = !_drawerOpen;
-    }
+        new string[] { "index", "Home" },
+        new string [] { "player", "Player"}
+    };
+
+    //void DrawerToggle()
+    //{
+    //    _drawerOpen = !_drawerOpen;
+    //}
 }

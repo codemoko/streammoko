@@ -1,0 +1,16 @@
+﻿@page "/images"
+@inject IDialogService DialogService
+@inject HttpClient client
+
+<h3>Images</h3>
+
+@code {
+    private void OpenDialog(string url)
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        var parms = new DialogParameters();
+        parms.Add("ImageResponse", url);
+        DialogService.Show<ImageSelection>("Simple Dialog", parms);
+
+    }
+}

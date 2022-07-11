@@ -1,44 +1,38 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">WorkerTest</a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-</div>
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="player">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Player
-            </NavLink>
-        </div>
-    </nav>
-</div>
+@inject NavigationManager Navigation
+@inject SignOutSessionStateManager SignOutManager
+
+
+<MudAppBar Dense="true">
+    <MudImage Width="100" Height="23" Src="MOKO.png" Alt="Mony the dog" Elevation="25" />
+    <MudGrid Spacing="2">
+        @foreach (string[] link in Links)
+        {
+            <MudItem>
+                <NavLink href="@link[0]">@link[1]</NavLink>
+            </MudItem>
+        }
+    </MudGrid>
+    <MudSpacer />
+    <AuthorizeView>
+        <Authorized>
+            Hello, @context.User.Identity.Name!
+            <NavLink href="#" @onclick="BeginSignOut">Log out</NavLink>
+        </Authorized>
+        <NotAuthorized>
+            <NavLink href="authentication/login">Log in</NavLink>
+        </NotAuthorized>
+    </AuthorizeView>
+</MudAppBar>
 
 @code {
-    private bool collapseNavMenu = true;
+    [Parameter] public List<string[]> Links { get; set; } = new List<string[]> { };
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+    private async Task BeginSignOut(MouseEventArgs args)
     {
-        collapseNavMenu = !collapseNavMenu;
+        await SignOutManager.SetSignOutState();
+        Navigation.NavigateTo("authentication/logout");
     }
 }

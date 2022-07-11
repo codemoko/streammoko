@@ -4,6 +4,7 @@
 @inject HttpClient Http
 @inject NavigationManager Navigation
 @inject IAccessTokenProvider TokenProvider
+@inject IDialogService DialogService
 @using Microsoft.AspNetCore.Components.Authorization
 @inject SignOutSessionStateManager SignOutManager
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
@@ -24,6 +25,7 @@
                     allowfullscreen="true"
                     id="stream-player"></iframe>
         </div>
+        <MudButton @onclick="OpenDialog">Open Images</MudButton>
     </Authorized>
     <NotAuthorized>
         <a href="authentication/login">Log in</a>
@@ -32,6 +34,7 @@
 <h3>Player</h3>
 
 @code {
+    public CloudflareImageResponse resp { get; set; }
     public class HelloWorld
     {
         public string hello { get; set; }
@@ -46,12 +49,12 @@
             var target = $"https://mokowebhooks.azurewebsites.net/api/MokoWebHooks";
             try
             {
-                var responseBody = JsonConvert.SerializeObject(new { Token = token.Value });
-                responseBody = Convert.ToBase64String(Encoding.UTF8.GetBytes(responseBody));
-                var result = await Http.PostAsJsonAsync(target, responseBody);
-
-                var test = await new StreamReader(result.Content.ReadAsStream()).ReadToEndAsync();
-                var done = false;
+                var responseBody = JsonConvert.SerializeObject(new { Token = token.Value, MokoCommand = "CFIMGS"});
+                var byteContent = new ByteArrayContent(Encoding.UTF8.GetBytes(responseBody));
+                HttpResponseMessage reponse = await Http.PostAsync(target, byteContent);
+                var responseEncodedStr = await new StreamReader(reponse.Content.ReadAsStream()).ReadToEndAsync();
+                var responseStr = Encoding.UTF8.GetString(Convert.FromBase64String(responseEncodedStr));
+                resp = JsonConvert.DeserializeObject<CloudflareImageResponse>(responseStr);
             }
             catch(Exception ex)
             {
@@ -64,5 +67,14 @@
         }
 
     }
+
+    private void OpenDialog()
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        var parms = new DialogParameters();
+        parms.Add("ImageResponse", resp);
+        DialogService.Show<ImageSelection>("Image Selection", parms);
+    }
+
     protected override async Task OnAfterRenderAsync(bool firstRender) => await jsRuntime.InvokeVoidAsync("tryLoadPlayer");
 }

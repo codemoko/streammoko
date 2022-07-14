@@ -1,6 +1,6 @@
 ﻿@page "/"
 
-<PageTitle>Index</PageTitle>
+@*<PageTitle>Index</PageTitle>
 
 <MudForm>
     <MudTextField T="string" Label="Multiline" Variant="Variant.Text" @bind-Text="Base64data" Lines="5" />
@@ -11,26 +11,33 @@
     <Slider Slide="Slide" />
 }
 
-<UploadFile />
+<UploadFile />*@
+@{
+    var x =  new string[]{
+        "https://imagedelivery.net/jS8jcZPhFpmoy3IXZsS5iw/29c640a7-926d-4dce-3738-ca790cbeac00/public", 
+    "https://imagedelivery.net/jS8jcZPhFpmoy3IXZsS5iw/f34ecd9d-fddf-448a-011f-ae047cdae900/public"};
+}
+
+<Banner Height="768" Imgs="x" />
 
 @code {
-    public string Base64data { get; set; }
-    public Objects.Slider Slide { get; set; }
+    //public string Base64data { get; set; }
+    //public Objects.Slider Slide { get; set; }
 
-    public void TrySetSlider()
-    {
-        if (!string.IsNullOrEmpty(Base64data))
-        {
-            try
-            {
-                Slide = Objects.Slider.DecodeSlider(Base64data);
-            }
-            catch (Exception ex)
-            {
-                Base64data = ex.Message;
-            }
-        }
-    }
+    //public void TrySetSlider()
+    //{
+    //    if (!string.IsNullOrEmpty(Base64data))
+    //    {
+    //        try
+    //        {
+    //            Slide = Objects.Slider.DecodeSlider(Base64data);
+    //        }
+    //        catch (Exception ex)
+    //        {
+    //            Base64data = ex.Message;
+    //        }
+    //    }
+    //}
 
     
 }

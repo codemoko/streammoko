@@ -4,6 +4,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerTest", "WorkerTest\WorkerTest.csproj", "{EC4C1400-A554-4EC2-8EA5-8A0A59B238C9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3161D685-F7F1-4114-BDB2-B7CFE6AEF33E} = {3161D685-F7F1-4114-BDB2-B7CFE6AEF33E}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StreamMokoWebHooks", "..\StreamMokoWebHooks\StreamMokoWebHooks.csproj", "{C5A34FD5-2644-479F-88C7-5739C6FCA1D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MokoPages", "MokoPages\MokoPages.csproj", "{3161D685-F7F1-4114-BDB2-B7CFE6AEF33E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shell", "Shell\Shell.csproj", "{9F1EFE0A-141B-4505-8655-4E22A04B141E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +24,18 @@ Global
 		{EC4C1400-A554-4EC2-8EA5-8A0A59B238C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC4C1400-A554-4EC2-8EA5-8A0A59B238C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC4C1400-A554-4EC2-8EA5-8A0A59B238C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5A34FD5-2644-479F-88C7-5739C6FCA1D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A34FD5-2644-479F-88C7-5739C6FCA1D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A34FD5-2644-479F-88C7-5739C6FCA1D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A34FD5-2644-479F-88C7-5739C6FCA1D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3161D685-F7F1-4114-BDB2-B7CFE6AEF33E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3161D685-F7F1-4114-BDB2-B7CFE6AEF33E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3161D685-F7F1-4114-BDB2-B7CFE6AEF33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3161D685-F7F1-4114-BDB2-B7CFE6AEF33E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F1EFE0A-141B-4505-8655-4E22A04B141E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F1EFE0A-141B-4505-8655-4E22A04B141E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F1EFE0A-141B-4505-8655-4E22A04B141E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F1EFE0A-141B-4505-8655-4E22A04B141E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

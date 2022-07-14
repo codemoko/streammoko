@@ -1,0 +1,12 @@
+D:\Desktop\stream-moko-core\WorkerTest\MokoPages\bin\Debug\net6.0\MokoPages.deps.json
+D:\Desktop\stream-moko-core\WorkerTest\MokoPages\bin\Debug\net6.0\MokoPages.dll
+D:\Desktop\stream-moko-core\WorkerTest\MokoPages\bin\Debug\net6.0\MokoPages.pdb
+D:\Desktop\stream-moko-core\WorkerTest\MokoPages\obj\Debug\net6.0\MokoPages.csproj.AssemblyReference.cache
+D:\Desktop\stream-moko-core\WorkerTest\MokoPages\obj\Debug\net6.0\MokoPages.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\stream-moko-core\WorkerTest\MokoPages\obj\Debug\net6.0\MokoPages.AssemblyInfoInputs.cache
+D:\Desktop\stream-moko-core\WorkerTest\MokoPages\obj\Debug\net6.0\MokoPages.AssemblyInfo.cs
+D:\Desktop\stream-moko-core\WorkerTest\MokoPages\obj\Debug\net6.0\MokoPages.csproj.CoreCompileInputs.cache
+D:\Desktop\stream-moko-core\WorkerTest\MokoPages\obj\Debug\net6.0\MokoPages.dll
+D:\Desktop\stream-moko-core\WorkerTest\MokoPages\obj\Debug\net6.0\refint\MokoPages.dll
+D:\Desktop\stream-moko-core\WorkerTest\MokoPages\obj\Debug\net6.0\MokoPages.pdb
+D:\Desktop\stream-moko-core\WorkerTest\MokoPages\obj\Debug\net6.0\ref\MokoPages.dll

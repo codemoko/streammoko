@@ -30,8 +30,16 @@
         {
             fileNames.Add(file.Name);
             var readStream = file.OpenReadStream();
-            var queue = new UploadQueue(); 
-            queue.Upload(readStream, Client).AndForget();
+            ByteArrayContent byteContent;
+            //var queue = new UploadQueue(); 
+            //queue.Upload(readStream, Client).AndForget();
+            using (var memoryStream = new MemoryStream())
+            {
+                await readStream.CopyToAsync(memoryStream);
+                var memoryBytes = memoryStream.ToArray();
+                byteContent = new ByteArrayContent(memoryBytes);
+            }
+            Client.PostAsync("", byteContent);
         }
 
         return;

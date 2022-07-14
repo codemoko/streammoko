@@ -1,0 +1,62 @@
+﻿@{
+    var heightStyle = $"height:{Height}px;";
+}
+<MudCarousel Class="mud-width-full" Style="@heightStyle" ShowArrows="@arrows" ShowBullets="@bullets" AutoCycle="@autocycle" TData="object">
+    @if (Imgs != null)
+    {
+        foreach (var img in Imgs)
+        {
+            var backgroundImageStyle = $"background: url('{img}') center top / contain no-repeat;";
+            <MudCarouselItem @onmouseenter="ToggleBannerOn" @onmouseleave="ToggleBannerOff" Style="@backgroundImageStyle" Transition="transition">
+                <div class="d-flex" style="height:100%">
+                    @*<MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Size="@Size.Large" />*@
+                </div>
+                <MudOverlay @bind-Visible="bannerHovered" DarkBackground="true" Absolute="true">
+                    <MudElement class="object-left-bottom">
+                        <MudElement HtmlTag="div" Class="hero-olay-box">
+                            <MudElement HtmlTag="div" Class="hero-olay-box-title">Title that is excessive in size</MudElement>
+                            <MudElement HtmlTag="div" Class="hero-olay-box-description" id="hero-olay-description-b">Title that is excessive in size, scope, process, fortitude, honor, integrity, together ness, hope, trust, ingenuity, vagueness, trust, blind faith, voueryism, harmony, powder, cheese.</MudElement>
+                            @* <a href="#" id="hero-watch-b" class="hero-olay-button">WATCH NOW</a>
+                                <a href="#" id="hero-list-b" class="hero-olay-list">ADD TO LIST</a>*@
+                            @*<MudFab Color="Color.Primary" StartIcon="@Icons.Filled.PlayArrow" Label="Play" />*@
+                            @*<MudFab Color="Color.Secondary" StartIcon="@Icons.Filled.Save" Label="Add to List" />*@
+                        </MudElement>
+                    </MudElement>
+
+
+                    @*<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@(e => ToggleOverlay(false))">Hide Overlay</MudButton>*@
+                </MudOverlay>
+            </MudCarouselItem>
+        }
+
+    }
+</MudCarousel>
+<MudSelect @bind-Value="transition" Label="Transition" Class="ma-2">
+    <MudSelectItem Value="@Transition.Fade">Fade</MudSelectItem>
+    <MudSelectItem Value="@Transition.Slide">Slide</MudSelectItem>
+    <MudSelectItem Value="@Transition.None">None</MudSelectItem>
+</MudSelect>
+<MudSwitch @bind-Checked="@arrows" Color="Color.Primary">Show Arrows</MudSwitch>
+<MudSwitch @bind-Checked="@bullets" Color="Color.Primary">Show Bullets</MudSwitch>
+<MudSwitch @bind-Checked="@autocycle" Color="Color.Primary">Auto Cycle (Default: 5 secs)</MudSwitch>
+@code {
+    private bool arrows = true;
+    private bool bullets = true;
+    private bool autocycle = true;
+    private bool bannerHovered = false;
+    private Transition transition = Transition.Slide;
+
+    [Parameter] public int Height { get; set; } = 200;
+    [Parameter] public string[] Imgs { get; set; }
+
+    public void ToggleBannerOn()
+    {
+        if (!bannerHovered) bannerHovered = true;
+    }
+
+    public void ToggleBannerOff()
+    {
+        if (bannerHovered) bannerHovered = false;
+    }
+
+}

@@ -9,6 +9,14 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "Google.Api.Gax.dll": "sha256-qodMK9Pkl3Xy1\/xHmsz6GQFXqqrShErbWBveN\/q7KgU=",
+      "Google.Api.Gax.Rest.dll": "sha256-MQ3PXewdI2aPZLx0ai6CPNUDaoh9fJpp4Wd3kQtADl4=",
+      "Google.Apis.dll": "sha256-NV2ATP6SkvSeuDIaW4jP44yRivp4x4uaXt\/iQlCaoXI=",
+      "Google.Apis.Auth.PlatformServices.dll": "sha256-xf0xronbIaAt8mFxW3rD5pGsQgRqUO6\/NImnxJJEQxQ=",
+      "Google.Apis.Auth.dll": "sha256-innIFhjnXNpiLnBBjGkYoxata9m+j0AddvMA+0y8\/SM=",
+      "Google.Apis.Bigquery.v2.dll": "sha256-Sjegyo9YFwJT64bhEYBnELwsgtHopwWtmPoZoQyLgyQ=",
+      "Google.Apis.Core.dll": "sha256-Uk5KHqgtiy4uko+FR+3GsCNxe24v1tPmnma3ZICKz2s=",
+      "Google.Cloud.BigQuery.V2.dll": "sha256-VvOXzi9ahH8eKvxIx2kWO+DWcb1tN5qltNuBPofn+ZY=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-i8erNm9\/ug+tjL2wTfd+HykmjYrmFhvrwwRNHqkahl4=",
       "Microsoft.AspNetCore.Components.dll": "sha256-27ExXdI7a7yGnPr9shnwet9criuoLLMCTJDSTm4TQ9E=",
       "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-EgbuNytHJcfB6hz0Vj+PBSHYjYTyXkaeXTY37JvHfZ4=",
@@ -17,6 +25,7 @@
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-izxJlD6frDIMfvXz53B+rqp7FpLgQypiJO+1kqTMPf4=",
       "Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll": "sha256-76DjCG+k0HDBwzF6E4gg8y0tZ7uApMm7sb07MqXjKoM=",
       "Microsoft.AspNetCore.Metadata.dll": "sha256-TWsXOgwB7TGU5zuqG46QFYIoZ1JprcYurxy\/bGZiMXU=",
+      "Microsoft.Bcl.AsyncInterfaces.dll": "sha256-VwXSRQctPreEAFR7MhR9u24siwK6i9p2cpeY9e\/erss=",
       "Microsoft.Extensions.Configuration.dll": "sha256-c8yYhfrOBLEnOBglLTu9peXSbJDwFpuT4UQiXSv28Og=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-5Otet+KKVUjNkE\/hqcNWmt75H1K2VNuKPFagpRd6Ces=",
       "Microsoft.Extensions.Configuration.Binder.dll": "sha256-wNKhG3Ovx8jqxbscz2AALlsTLfI6GL2dyDhe63mSsoM=",
@@ -32,10 +41,16 @@
       "Microsoft.Extensions.Logging.Abstractions.dll": "sha256-w+c+xfLh8QIAwluhugyPc8sPvAmmIC\/UTxnugT7Oido=",
       "Microsoft.Extensions.Options.dll": "sha256-eGESyy9mRu8RcCGajAu4E8nxSmeB5nxiZkFPVaZ5Vl0=",
       "Microsoft.Extensions.Primitives.dll": "sha256-jOmoWSfsdQexH\/6QCA56gR1RMEqeix2iDDUBWbpAOQI=",
+      "Microsoft.IdentityModel.JsonWebTokens.dll": "sha256-olDcoulg\/\/HfitOlC0u358GQesvW84Ui75akOJ19iKc=",
+      "Microsoft.IdentityModel.Logging.dll": "sha256-7\/NCvXhC5NnQDQDdC6AKdHh6z2hpveLrSDv4TVrbMHQ=",
+      "Microsoft.IdentityModel.Protocols.dll": "sha256-qMx35sTK0oE9Q7UfUxbwlUj7LuSI6nLT9CQOErsRfPk=",
+      "Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": "sha256-st8EaArOREQWsBlkR0kFNz2UG3710+dgrJtzbFfNRqo=",
+      "Microsoft.IdentityModel.Tokens.dll": "sha256-cif3BXkYstIa6T\/WEIdOM7xAGjRnJqWuMIqWoengE2E=",
       "Microsoft.JSInterop.dll": "sha256-y5UI2mXoPRb17qPFRWNqpbSKRGBzP+FvhcpcUg+TBBE=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-9fmAKBOzIs7ySpwatFoAUhMgaJtTQvGN5+TArCHX9QE=",
       "MudBlazor.dll": "sha256-1sFOrVrntR1nwwf6wSd8h3SXrqRRtXtmudAdQZw31eo=",
       "Newtonsoft.Json.dll": "sha256-cs8pHUurDt0IqbB8YXPh560au3q3J\/1wRL9jBddRVmE=",
+      "System.IdentityModel.Tokens.Jwt.dll": "sha256-mW\/GruPRknuHDBAI\/QWr712swc0Fa+czZ8ImntIoPiU=",
       "System.IO.Pipelines.dll": "sha256-6+E55JXedimdw1c1bDtVg4K7XuWjVWVTifH8QpfzXSY=",
       "Microsoft.CSharp.dll": "sha256-vQI17SrfTJckI\/jSEDgWkczMgznxgPfZ30+RelRLGQk=",
       "Microsoft.VisualBasic.Core.dll": "sha256-9LLLoUznoJQJkFXhqjm0046DM5H5HOglyvjabkTaxIo=",
@@ -203,13 +218,15 @@
       "mscorlib.dll": "sha256-Q4A\/043fz702a7DDbm+JAtMHV3jKAZ9k8khztTMKp2M=",
       "netstandard.dll": "sha256-W9cwgVmBZsddVw3WVFMC5Gya92UufvbVTNR4+u7pnR0=",
       "System.Private.CoreLib.dll": "sha256-KVnZkFos\/ML\/3S2isVijfmFZXO4zEQeCga6BZvGdTbY=",
-      "WorkerTest.dll": "sha256-tYu9tiNde226+umx6OJRbsP+F8kZiPy33kf+zHf7MZQ="
+      "MokoPages.dll": "sha256-sHnIFegTZEMfIf3VtcpO2FtRcngZXVrvFkteX+5qM34=",
+      "WorkerTest.dll": "sha256-1HCk9Sra+whFyZas3\/VdrUP8iD4nsTf772cQG1c\/KTo="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "WorkerTest.pdb": "sha256-ajz7QXxH2+oXvI4\/yjjoXvUP08G3UIyVERd3S9yyFVQ="
+      "MokoPages.pdb": "sha256-xKRZ9+S\/w9kLkP211ShEuLl2zRPytur8M40VxJde9Zk=",
+      "WorkerTest.pdb": "sha256-6u6ELjpqMUjV7LQVdHWAF8+KyZsbEANPTz31hAuHcpU="
     },
     "runtime": {
       "dotnet.6.0.4.12en9kvijn.js": "sha256-WYno\/cK5MDsl5yi4T\/\/QgUskbBfhLL77i+c0uKzO9+c=",

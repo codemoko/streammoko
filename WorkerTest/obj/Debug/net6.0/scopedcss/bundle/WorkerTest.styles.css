@@ -1,3 +1,64 @@
+/* /Shared/Banner.razor.rz.scp.css */
+.hero-olay-box[b-up9g27ojbw] {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    margin-bottom: 35px;
+}
+
+    .hero-olay-box .hero-olay-box-title[b-up9g27ojbw] {
+        font-size: 30px;
+        font-weight: 900;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+
+    .hero-olay-box .hero-olay-box-description[b-up9g27ojbw] {
+        display: -webkit-box;
+        max-width: 400px;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+
+    .hero-olay-box .hero-olay-button[b-up9g27ojbw] {
+        text-decoration: none;
+        cursor: pointer;
+        background: -webkit-linear-gradient(left, #55077c 0%, #ee077e 100%);
+        padding: 10px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+        z-index: 3;
+    }
+
+    .hero-olay-box .hero-olay-list[b-up9g27ojbw] {
+        text-decoration: none;
+        cursor: pointer;
+        background-color: #ee077e;
+        padding: 10px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+        margin-left: 5px;
+        z-index: 3;
+    }
+
+.hero-olay[b-up9g27ojbw] {
+    /*transform: preserve-3d;*/
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    top: 0;
+    /*background-color: rgba(0, 0, 0, 0.6);*/
+}
+.mud-overlay .mud-overlay-content[b-up9g27ojbw] {
+    position: absolute;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-9d4d6egoid] {
     position: relative;

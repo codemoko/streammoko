@@ -10,6 +10,7 @@
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 @using Newtonsoft.Json
 @using System.Text
+@using MokoPages
 
 <AuthorizeView>
     <Authorized>
@@ -25,56 +26,53 @@
                     allowfullscreen="true"
                     id="stream-player"></iframe>
         </div>
-        <MudButton @onclick="OpenDialog">Open Images</MudButton>
+        <h3>@BigQueryCloudflarePageResponse.FIXED_PAGE_SIZE</h3>
+        @*<MudButton Disabled="@buttonDisabled" @onclick="OpenDialog">Open Images</MudButton>*@
+        <CloudflareImagesMgr />
     </Authorized>
     <NotAuthorized>
         <a href="authentication/login">Log in</a>
     </NotAuthorized>
 </AuthorizeView>
-<h3>Player</h3>
+@*<h3>Player</h3>*@
 
 @code {
-    public CloudflareImageResponse resp { get; set; }
-    public class HelloWorld
-    {
-        public string hello { get; set; }
-    }
+    //public CloudflareImageResponse CloudflareImages { get; set; }
+    public bool buttonDisabled = true;
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    var tokenResult = await TokenProvider.RequestAccessToken(new AccessTokenRequestOptions{Scopes = new List<string>{"openid", "profile"}});
+    //    tokenResult.TryGetToken(out var token);
+    //    if (!string.IsNullOrEmpty(token?.Value))
+    //    {
+    //        //var target = $"https://mokowebhooks.azurewebsites.net/api/MokoWebHooks"; //prod
+    //        //var result = await httpClient.GetStringAsync($"https://api.cloudflare.com/client/v4/accounts/027e91bbdc18f8d25e2629835deb5d69/images/v1?page={page}&per_page={perPage}");
 
-    protected override async Task OnInitializedAsync()
-    {
-        var tokenResult = await TokenProvider.RequestAccessToken(new AccessTokenRequestOptions{Scopes = new List<string>{"openid", "profile"}});
-        tokenResult.TryGetToken(out var token);
-        if (!string.IsNullOrEmpty(token?.Value))
-        {
-            var target = $"https://mokowebhooks.azurewebsites.net/api/MokoWebHooks";
-            try
-            {
-                var responseBody = JsonConvert.SerializeObject(new { Token = token.Value, MokoCommand = "CFIMGS"});
-                var byteContent = new ByteArrayContent(Encoding.UTF8.GetBytes(responseBody));
-                HttpResponseMessage reponse = await Http.PostAsync(target, byteContent);
-                var responseEncodedStr = await new StreamReader(reponse.Content.ReadAsStream()).ReadToEndAsync();
-                var responseStr = Encoding.UTF8.GetString(Convert.FromBase64String(responseEncodedStr));
-                resp = JsonConvert.DeserializeObject<CloudflareImageResponse>(responseStr);
-            }
-            catch(Exception ex)
-            {
-                var exMess = ex.Message;
-                var notdone = false;
-            }
-            //var ansy = await Http.GetFromJsonAsync<HelloWorld>(target);
-            //var pantsy = false;
+    //        var target = $"http://localhost:7071/api/MokoWebHooks"; //dev
+    //        try
+    //        {
+    //            var responseBody = JsonConvert.SerializeObject(new { Token = token.Value, MokoCommand = "CFIMGS"});
+    //            var byteContent = new ByteArrayContent(Encoding.UTF8.GetBytes(responseBody));
+    //            HttpResponseMessage reponse = await Http.PostAsync(target, byteContent);
+    //            var responseStr = await new StreamReader(reponse.Content.ReadAsStream()).ReadToEndAsync();
+    //            CloudflareImages = JsonConvert.DeserializeObject<CloudflareImageResponse>(responseStr);
+    //            buttonDisabled = false;
+    //        }
+    //        catch(Exception ex)
+    //        {
+    //            var exMess = ex.Message;
+    //        }
+    //    }
 
-        }
+    //}
 
-    }
-
-    private void OpenDialog()
-    {
-        var options = new DialogOptions { CloseOnEscapeKey = true };
-        var parms = new DialogParameters();
-        parms.Add("ImageResponse", resp);
-        DialogService.Show<ImageSelection>("Image Selection", parms);
-    }
+    //private void OpenDialog()
+    //{
+    //    var options = new DialogOptions { CloseOnEscapeKey = true };
+    //    var parms = new DialogParameters();
+    //    parms.Add("ImageResponse", CloudflareImages);
+    //    DialogService.Show<ImageSelection>("Image Selection", parms);
+    //}
 
     protected override async Task OnAfterRenderAsync(bool firstRender) => await jsRuntime.InvokeVoidAsync("tryLoadPlayer");
 }

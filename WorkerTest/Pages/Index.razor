@@ -1,43 +1,23 @@
 ﻿@page "/"
+@inject IDialogService DialogService
 
-@*<PageTitle>Index</PageTitle>
-
-<MudForm>
-    <MudTextField T="string" Label="Multiline" Variant="Variant.Text" @bind-Text="Base64data" Lines="5" />
-    <MudButton OnClick="TrySetSlider" Variant="Variant.Filled">Default</MudButton>
-</MudForm>
-@if (!string.IsNullOrEmpty(Base64data) && Slide != null)
-{
-    <Slider Slide="Slide" />
-}
-
-<UploadFile />*@
-@{
-    var x =  new string[]{
-        "https://imagedelivery.net/jS8jcZPhFpmoy3IXZsS5iw/29c640a7-926d-4dce-3738-ca790cbeac00/public", 
-    "https://imagedelivery.net/jS8jcZPhFpmoy3IXZsS5iw/f34ecd9d-fddf-448a-011f-ae047cdae900/public"};
-}
-
-@*<Banner Height="768" Imgs="x" />*@
+<MudButton Variant="Variant.Filled" OnClick="ProbeForEnvVar" Color="Color.Secondary">Secondary</MudButton>
 
 @code {
-    //public string Base64data { get; set; }
-    //public Objects.Slider Slide { get; set; }
 
-    //public void TrySetSlider()
-    //{
-    //    if (!string.IsNullOrEmpty(Base64data))
-    //    {
-    //        try
-    //        {
-    //            Slide = Objects.Slider.DecodeSlider(Base64data);
-    //        }
-    //        catch (Exception ex)
-    //        {
-    //            Base64data = ex.Message;
-    //        }
-    //    }
-    //}
+        public void ProbeForEnvVar()
+        {
+            var key = "TESTING_THIS";
+            var resultDic = new Dictionary<string, string>();
+            foreach(EnvironmentVariableTarget target in Enum.GetValues(typeof(EnvironmentVariableTarget)))
+            {
+                resultDic.Add(target.ToString(), Environment.GetEnvironmentVariable(key, target));
+            }
 
+            //return JsonConvert.SerializeObject(resultDic);
+
+            DialogService.
+        }
+    }
     
 }

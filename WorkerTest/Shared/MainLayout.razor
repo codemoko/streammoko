@@ -6,51 +6,35 @@
     MaxWidth="MaxWidth.ExtraLarge"
     CloseButton="true"
     DisableBackdropClick="false"
-    NoHeader="true"
     Position="DialogPosition.Center"
     CloseOnEscapeKey="true"
 />
 <MudSnackbarProvider/>
 
-@*<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
-
-    <main>
-        <div class="top-row px-4">
-            <AccessControl />
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>*@
-
-
 <MudLayout>
     <NavMenu Links="Links" />
-    <MudDrawer @bind-Open="@_drawerOpen"></MudDrawer>
     <MudMainContent>
         @Body
     </MudMainContent>
 </MudLayout>
 
 @code {
-    private MudTheme _theme = new();
+    private MudTheme _theme = new()
+    {
+        Typography = new Typography()
+        {
+            Default = new Default()
+            {
+                FontFamily = new []{"Arvo"}
+            }
+        }
+    };
     bool _drawerOpen = false;
     bool _isDarkMode = true;
 
     private List<string[]> Links = new List<string[]>
     {
-        new string[] { "index", "Home" },
+        new string[] { "", "Home" },
         new string [] { "player", "Player"}
     };
-
-    //void DrawerToggle()
-    //{
-    //    _drawerOpen = !_drawerOpen;
-    //}
 }

@@ -25,6 +25,10 @@
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-izxJlD6frDIMfvXz53B+rqp7FpLgQypiJO+1kqTMPf4=",
       "Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll": "sha256-76DjCG+k0HDBwzF6E4gg8y0tZ7uApMm7sb07MqXjKoM=",
       "Microsoft.AspNetCore.Metadata.dll": "sha256-TWsXOgwB7TGU5zuqG46QFYIoZ1JprcYurxy\/bGZiMXU=",
+      "Microsoft.Azure.Cosmos.Client.dll": "sha256-cl5aIZ+YHx5ImihF7EhMV7z4nF\/i1gdvguFAqV97Nek=",
+      "Microsoft.Azure.Cosmos.Core.dll": "sha256-0yp9MzkU4cqdOlZE\/9xos7a5MIsDE+k5CAMBzdJAE\/Q=",
+      "Microsoft.Azure.Cosmos.Direct.dll": "sha256-oKYd18\/j+U8ASB\/kpsbEnqHRcgcVgYmv7wZ7DbhCaqg=",
+      "Microsoft.Azure.Cosmos.Serialization.HybridRow.dll": "sha256-s6\/5L4IL1YLg5f7hi0CLw24nTpEXF9yoX6ZKRNleSL8=",
       "Microsoft.Bcl.AsyncInterfaces.dll": "sha256-VwXSRQctPreEAFR7MhR9u24siwK6i9p2cpeY9e\/erss=",
       "Microsoft.Extensions.Configuration.dll": "sha256-c8yYhfrOBLEnOBglLTu9peXSbJDwFpuT4UQiXSv28Og=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-5Otet+KKVUjNkE\/hqcNWmt75H1K2VNuKPFagpRd6Ces=",
@@ -50,8 +54,11 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-9fmAKBOzIs7ySpwatFoAUhMgaJtTQvGN5+TArCHX9QE=",
       "MudBlazor.dll": "sha256-1sFOrVrntR1nwwf6wSd8h3SXrqRRtXtmudAdQZw31eo=",
       "Newtonsoft.Json.dll": "sha256-cs8pHUurDt0IqbB8YXPh560au3q3J\/1wRL9jBddRVmE=",
+      "System.Configuration.ConfigurationManager.dll": "sha256-6BS3nxdezehVx64APNi8XtiO3qSrQInQVe17Y9p7vsk=",
       "System.IdentityModel.Tokens.Jwt.dll": "sha256-mW\/GruPRknuHDBAI\/QWr712swc0Fa+czZ8ImntIoPiU=",
       "System.IO.Pipelines.dll": "sha256-6+E55JXedimdw1c1bDtVg4K7XuWjVWVTifH8QpfzXSY=",
+      "System.Security.Cryptography.ProtectedData.dll": "sha256-gFZvCDns5ZRuZr+fANcj5Z43G6E0GhjgDHx6fEkpjh0=",
+      "System.Security.Permissions.dll": "sha256-jKmbTXbScI0nBA2C2HyfK+smmH4oMUauprwnXZLolc4=",
       "Microsoft.CSharp.dll": "sha256-vQI17SrfTJckI\/jSEDgWkczMgznxgPfZ30+RelRLGQk=",
       "Microsoft.VisualBasic.Core.dll": "sha256-9LLLoUznoJQJkFXhqjm0046DM5H5HOglyvjabkTaxIo=",
       "Microsoft.VisualBasic.dll": "sha256-DlO8\/HLjrJ0KMmqP055uefQygMnRMnQsiFInrDskkY8=",
@@ -218,15 +225,15 @@
       "mscorlib.dll": "sha256-Q4A\/043fz702a7DDbm+JAtMHV3jKAZ9k8khztTMKp2M=",
       "netstandard.dll": "sha256-W9cwgVmBZsddVw3WVFMC5Gya92UufvbVTNR4+u7pnR0=",
       "System.Private.CoreLib.dll": "sha256-KVnZkFos\/ML\/3S2isVijfmFZXO4zEQeCga6BZvGdTbY=",
-      "MokoPages.dll": "sha256-sHnIFegTZEMfIf3VtcpO2FtRcngZXVrvFkteX+5qM34=",
-      "WorkerTest.dll": "sha256-1HCk9Sra+whFyZas3\/VdrUP8iD4nsTf772cQG1c\/KTo="
+      "MokoPages.dll": "sha256-p6ZLQUNBggdQaAyMZazQ5QvAZchF+AU3Xm7SWAb2jgs=",
+      "WorkerTest.dll": "sha256-wDbpdGq+fLaSpu6hXs8DmNiCBLrilebkshhdS4E78fY="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "MokoPages.pdb": "sha256-xKRZ9+S\/w9kLkP211ShEuLl2zRPytur8M40VxJde9Zk=",
-      "WorkerTest.pdb": "sha256-6u6ELjpqMUjV7LQVdHWAF8+KyZsbEANPTz31hAuHcpU="
+      "MokoPages.pdb": "sha256-45HnURImwSM1VPZ7FPAoi5cU6CglGbZVAWDhnhcY7iA=",
+      "WorkerTest.pdb": "sha256-sgNhldrfAXq44axiWiD\/t5jek+kQNWWlDYZ05dbgQek="
     },
     "runtime": {
       "dotnet.6.0.4.12en9kvijn.js": "sha256-WYno\/cK5MDsl5yi4T\/\/QgUskbBfhLL77i+c0uKzO9+c=",

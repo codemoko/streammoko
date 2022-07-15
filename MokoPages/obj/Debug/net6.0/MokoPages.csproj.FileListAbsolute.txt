@@ -10,3 +10,5 @@ D:\Desktop\stream-moko-core\WorkerTest\MokoPages\obj\Debug\net6.0\MokoPages.dll
 D:\Desktop\stream-moko-core\WorkerTest\MokoPages\obj\Debug\net6.0\refint\MokoPages.dll
 D:\Desktop\stream-moko-core\WorkerTest\MokoPages\obj\Debug\net6.0\MokoPages.pdb
 D:\Desktop\stream-moko-core\WorkerTest\MokoPages\obj\Debug\net6.0\ref\MokoPages.dll
+D:\Desktop\stream-moko-core\WorkerTest\MokoPages\bin\Debug\net6.0\Microsoft.Azure.Cosmos.ServiceInterop.dll
+D:\Desktop\stream-moko-core\WorkerTest\MokoPages\bin\Debug\net6.0\Cosmos.CRTCompat.dll

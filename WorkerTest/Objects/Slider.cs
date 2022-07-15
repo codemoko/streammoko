@@ -1,4 +1,5 @@
 ﻿using MokoPages;
+using MokoPages.Data.CloudflareImages;
 using Newtonsoft.Json;
 using System.Text;
 namespace WorkerTest.Objects
@@ -6,13 +7,23 @@ namespace WorkerTest.Objects
     public class Slider
     {
         public string Name { get; set; } = "Default";
-        public List<string> Links { get; set; } = new List<string>();
+        public List<string> Links {  get
+            {
+                if (Pages == null)
+                {
+                    return null;
+                }
+                return Pages[PagePosition].Images.Select(x => x.Variants.First()).ToList();
+            }
+        }
+        public CloudflareImagePage[] Pages { get; set; }
+        public int PagePosition { get; set; } = 0;
 
         public Slider(){}
 
-        public Slider(CloudflareImageResponse cloudflareImageResponse)
+        public Slider(CloudflareImagePage[] resultsPages)
         {
-            Links = cloudflareImageResponse.Result.Images.Select(x => x.Variants[0]).ToList();
+            Pages = resultsPages;
         }
 
         public static Slider DecodeSlider(string base64Str)

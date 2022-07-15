@@ -1,11 +1,10 @@
 ﻿@page "/"
-@inject IDialogService DialogService
 
 <MudButton Variant="Variant.Filled" OnClick="ProbeForEnvVar" Color="Color.Secondary">Secondary</MudButton>
-
+<p>@Result</p>
 @code {
-
-        public void ProbeForEnvVar()
+    private string Result { get; set; }
+    public void ProbeForEnvVar()
         {
             var key = "TESTING_THIS";
             var resultDic = new Dictionary<string, string>();
@@ -13,10 +12,7 @@
             {
                 resultDic.Add(target.ToString(), Environment.GetEnvironmentVariable(key, target));
             }
-
-            //return JsonConvert.SerializeObject(resultDic);
-
-            DialogService.
+            Result = JsonConvert.SerializeObject(resultDic);
         }
     }
     

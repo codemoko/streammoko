@@ -1,26 +1,61 @@
 ﻿@using Microsoft.AspNetCore.Components.Authorization
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using MudBlazor.Utilities
 
 @inject NavigationManager Navigation
 @inject SignOutSessionStateManager SignOutManager
 
 
-<MudAppBar Dense="true">
-    <MudImage Width="100" Height="23" Src="MOKO.png" Alt="Mony the dog" Elevation="25" />
-    <MudSpacer />
+<MudAppBar Elevation="1" Dense="true">
+    <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="() => {ToggleDrawerCallback.Invoke(); toggle = !toggle;}" />
+    <MudHidden Invert="toggle">
+        <Logo />
+    </MudHidden>
     <MudGrid Spacing="2">
         @foreach (string[] link in Links)
         {
             <MudItem>
-                <NavLink href="@link[0]">@link[1]</NavLink>
+                <MudButton Href="@link[0]">@link[1].ToUpper()</MudButton>
             </MudItem>
         }
     </MudGrid>
     <MudSpacer />
     <AuthorizeView>
         <Authorized>
-            Hello, @context.User.Identity.Name!
-            <NavLink href="#" @onclick="BeginSignOut">Log out</NavLink>
+            @*<MudContainer Class="d-flex align-center">
+                <MudContainer Class=" align-self-center py-4 flex-1 mud-theme-primary">
+                    <MudAutocomplete Margin="Margin.None" T="string" Placeholder="Search"
+                        AdornmentIcon="@Icons.Material.Filled.Search" Adornment="Adornment.None" />
+                </MudContainer>
+            </MudContainer>*@
+            <MudStack Row="true">
+                <MudAutocomplete 
+                    SearchFunc="@SearchAsync" Immediate="true"
+                    ResetValueOnEmptyText="true" Style="top: -10px;" 
+                    Margin="Margin.None" T="string" Placeholder="Search"
+                    AdornmentIcon="@Icons.Material.Filled.Search" Adornment="Adornment.None"
+                    
+                    />
+                    </MudStack>
+
+
+            @*<MudTooltip Duration="1000" Placement="Placement.Left">
+                <ChildContent>
+                <MudIconButton Icon="@Icons.Material.Filled.PlaylistPlay" Href="#list" />
+                </ChildContent>
+                <TooltipContent>
+                <MudText Typo="Typo.body2">List</MudText>
+                </TooltipContent>
+                </MudTooltip>
+                <MudTooltip Duration="1000" Placement="Placement.Left">
+                <ChildContent>
+                <MudIconButton  Icon="@Icons.Material.Filled.Person" Href="#profile" />
+                </ChildContent>
+                <TooltipContent>
+                <MudText Typo="Typo.body2">@context.User.Identity.Name</MudText>
+                </TooltipContent>
+                </MudTooltip>*@
+            @*<NavLink href="#" @onclick="BeginSignOut">Log out</NavLink>*@
         </Authorized>
         <NotAuthorized>
             <NavLink href="authentication/login">Log in</NavLink>
@@ -30,10 +65,46 @@
 
 @code {
     [Parameter] public List<string[]> Links { get; set; } = new List<string[]> { };
+    [Parameter] public Action ToggleDrawerCallback { get; set; }
+
+    bool toggle = false;
 
     private async Task BeginSignOut(MouseEventArgs args)
     {
         await SignOutManager.SetSignOutState();
         Navigation.NavigateTo("authentication/logout");
+    }
+
+    
+    private static string[] states =
+    {
+        "Alabama", "Alaska", "American Samoa", "Arizona",
+        "Arkansas", "California", "Colorado", "Connecticut",
+        "Delaware", "District of Columbia", "Federated States of Micronesia",
+        "Florida", "Georgia", "Guam", "Hawaii", "Idaho",
+        "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky",
+        "Louisiana", "Maine", "Marshall Islands", "Maryland",
+        "Massachusetts", "Michigan", "Minnesota", "Mississippi",
+        "Missouri", "Montana", "Nebraska", "Nevada",
+        "New Hampshire", "New Jersey", "New Mexico", "New York",
+        "North Carolina", "North Dakota", "Northern Mariana Islands", "Ohio",
+        "Oklahoma", "Oregon", "Palau", "Pennsylvania", "Puerto Rico",
+        "Rhode Island", "South Carolina", "South Dakota", "Tennessee",
+        "Texas", "Utah", "Vermont", "Virgin Island", "Virginia",
+        "Washington", "West Virginia", "Wisconsin", "Wyoming",
+    };
+
+    private async Task<IEnumerable<string>> SearchAsync(string value)
+    {
+        // In real life use an asynchronous function for fetching data from an api.
+        await Task.Delay(5);
+
+        // if text is null or empty, show complete list
+        if (string.IsNullOrEmpty(value))
+        {
+            return new string[]{};
+        }
+
+        return states.Where(x => x.Contains(value, StringComparison.InvariantCultureIgnoreCase));
     }
 }

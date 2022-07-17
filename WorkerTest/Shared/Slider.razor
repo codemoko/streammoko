@@ -1,50 +1,42 @@
 ﻿@inject IDialogService DialogService
+@inject IJSRuntime jsRuntime
 
 @if (Slide != null)
 {
     <h3>@Slide.Name</h3>
-    <MudStack id="mud-stack" Style="overflow-x: auto" Row="true">
-        @foreach (string x in Slide.Links)
-        {
-            <MudPaper>
-                <MudCard Style="width: 400px">
-                    <MudCardMedia @onclick="() => OpenDialog(x)" Image="@x" Height="600" />
-                    <MudCardContent>
-                        <MudText Typo="Typo.h5">Old Paint</MudText>
-                        <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
-                        <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
-                    </MudCardContent>
-                    <MudCardActions>
-                        <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-                        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
-                    </MudCardActions>
-                </MudCard>
-            </MudPaper>
-        }
+    <MudStack AlignItems="AlignItems.Center" Row="true">
+        <MudStack Class="pa-3" Width="3%">
+            <MudIconButton Icon="@Icons.Material.Filled.ArrowLeft" Size="Size.Large" OnClick="ScrollLeft" />
+        </MudStack>
+        <MudStack id="@SLIDER_ID" Style="overflow-x: auto;"  Class="pa-3" Width="94%">
+            <MudStack Row="true">
+                @foreach (string x in Slide.Links)
+                {
+                    <MudPaper>
+                        <MudCard Style="width: 400px">
+                            <MudCardMedia @onclick="() => OpenDialog(x)" Image="@x" Height="600" />
+                            <MudCardContent>
+                                <MudText Typo="Typo.h5">Old Paint</MudText>
+                                <MudText Typo="Typo.body2">Old paint found on a stone house door.</MudText>
+                                <MudText Typo="Typo.body2">This photo was taken in a small village in Istra Croatia.</MudText>
+                            </MudCardContent>
+                            <MudCardActions>
+                                <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
+                                <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton>
+                            </MudCardActions>
+                        </MudCard>
+                    </MudPaper>
+                }
+            </MudStack>
+        </MudStack>
+        <MudStack Class="pa-3" Width="3%"><MudIconButton Icon="@Icons.Material.Filled.ArrowRight" Size="Size.Large" OnClick="ScrollRight" /></MudStack>
     </MudStack>
-    @*<MudCarousel Style="overflow: auto;" Class="mud-width-full" Style="height: 800px;" ShowArrows="@arrows" ShowBullets="@bullets" AutoCycle="@autocycle" TData="object">
-        @foreach (string x in Slide.Links)
-        {
-            <MudCarouselItem Transition="transition">
-                <div class="d-flex" style="height:100%; width: 100%">
-                    <MudImage @onclick="() => OpenDialog(x)" Fluid="true" Src="@x" Alt="Swedish Farm House" Class="rounded-lg" />
-                </div>
-            </MudCarouselItem>
-        }
-    </MudCarousel>
-    <MudSelect @bind-Value="transition" Label="Transition" Class="ma-2">
-        <MudSelectItem Value="@Transition.Fade">Fade</MudSelectItem>
-        <MudSelectItem Value="@Transition.Slide">Slide</MudSelectItem>
-        <MudSelectItem Value="@Transition.None">None</MudSelectItem>
-    </MudSelect>
-    <MudSwitch @bind-Checked="@arrows" Color="Color.Primary">Show Arrows</MudSwitch>
-    <MudSwitch @bind-Checked="@bullets" Color="Color.Primary">Show Bullets</MudSwitch>
-    <MudSwitch @bind-Checked="@autocycle" Color="Color.Primary">Auto Cycle (Default: 5 secs)</MudSwitch>
-*@
 }
 
 @code {
-    [Parameter] public Objects.Slider Slide { get; set; } = new Objects.Slider { };
+    private static readonly string SLIDER_ID = "mud-stack";
+
+    [Parameter] public Objects.SliderObj Slide { get; set; } = new Objects.SliderObj { };
 
     private void OpenDialog(string url)
     {
@@ -54,8 +46,13 @@
         DialogService.Show<ImageDialog>("Simple Dialog", parms);
     }
 
-    private bool arrows = true;
-    private bool bullets = true;
-    private bool autocycle = true;
-    private Transition transition = Transition.Slide;
+    public async Task ScrollLeft()
+    {
+        await jsRuntime.InvokeVoidAsync("tryScrollId", SLIDER_ID, -400);
+    }
+
+    public async Task ScrollRight()
+    {
+        await jsRuntime.InvokeVoidAsync("tryScrollId", SLIDER_ID, 400);
+    }
 }

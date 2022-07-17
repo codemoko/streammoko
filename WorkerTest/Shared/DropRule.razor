@@ -1,0 +1,39 @@
+﻿<MudDropContainer T="DropItem" Items="_items" ItemsSelector="@((item,dropzone) => item.Identifier == dropzone)" ItemDropped="ItemUpdated" Class="d-flex flex-wrap flex-grow-1">
+    <ChildContent>
+        <MudDropZone T="DropItem" Identifier="Drop Zone 1">
+            <MudText Typo="Typo.h6" Class="mb-4">Drop Zone 1</MudText>
+         </MudDropZone>
+        <MudDropZone T="DropItem" Identifier="Drop Zone 2" >
+            <MudText Typo="Typo.h6" Class="mb-4">Drop Zone 2</MudText>
+        </MudDropZone>
+    </ChildContent>
+    <ItemRenderer>
+        <MudPaper Elevation="25" Class="pa-4 my-4"><MudImage Src="@context.Img" Width="54" Height="68"/></MudPaper>
+    </ItemRenderer>
+</MudDropContainer>
+
+@code {
+    private void ItemUpdated(MudItemDropInfo<DropItem> dropItem)
+    {
+        dropItem.Item.Identifier = dropItem.DropzoneIdentifier;
+    }
+
+    private List<DropItem> _items = new()
+		{
+			new DropItem() { Img = "https://imagedelivery.net/jS8jcZPhFpmoy3IXZsS5iw/52dbfdb8-3f16-4e16-c71c-01665d21ac00/public", Color = Color.Error, IsRotten = false, Place = "Fridge", Identifier = "Drop Zone 1" },
+		    new DropItem() { Img = "https://imagedelivery.net/jS8jcZPhFpmoy3IXZsS5iw/52dbfdb8-3f16-4e16-c71c-01665d21ac00/public", Color = Color.Warning, IsRotten = false, Place = "Fridge", Identifier = "Drop Zone 2" },
+		    new DropItem() { Img = "https://imagedelivery.net/jS8jcZPhFpmoy3IXZsS5iw/52dbfdb8-3f16-4e16-c71c-01665d21ac00/public", Color = Color.Secondary, IsRotten = true, Place = "Fridge", Identifier = "Drop Zone 2" },
+		    new DropItem() { Img = "https://imagedelivery.net/jS8jcZPhFpmoy3IXZsS5iw/52dbfdb8-3f16-4e16-c71c-01665d21ac00/public", Color = Color.Success, IsRotten = false, Place = "Fridge", Identifier = "Drop Zone 1" },
+		    new DropItem() { Img = "https://imagedelivery.net/jS8jcZPhFpmoy3IXZsS5iw/52dbfdb8-3f16-4e16-c71c-01665d21ac00/public", Color = Color.Info, IsRotten = true, Place = "Fridge", Identifier = "Drop Zone 2" },
+		};
+
+    public class DropItem
+    {
+        public string Img { get; init; }
+        public Color Color { get; init; }
+        public bool IsRotten { get; set; }
+        public bool IsPicked { get; set; }
+        public string Place { get; set; }
+        public string Identifier { get; set; }
+    }
+}

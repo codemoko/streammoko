@@ -15,3 +15,9 @@
 @using MokoPages
 @using MokoPages.Data.CloudflareImages
 @using Newtonsoft.Json
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using MudBlazor.Services
+
+@inject IAccessTokenProvider TokenProvider
+@inject ISnackbar Snackbar
+@inject HttpClient Http

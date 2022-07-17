@@ -1,0 +1,30 @@
+﻿    <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
+        <MudTextField T="string" @bind-Value="showName" Label="Show Name" Required="true" RequiredError="@DEFAULT_ERROR" />
+        <MudTextField T="string" @bind-Value="showDescription" Label="Show Description" Required="true" RequiredError="@DEFAULT_ERROR" />
+        <MudTextField T="string" @bind-Value="creatorName" Label="Creator Name" RequiredError="@DEFAULT_ERROR" />
+        <MudTextField T="string" @bind-Value="creatorDescription" Label="Creator Description" RequiredError="@DEFAULT_ERROR" />
+        <div class="d-flex align-center justify-space-between">
+            <MudCheckBox T="bool" @bind-Checked="hideCreatorPage" Required="true" RequiredError="@DEFAULT_ERROR" Label="Hide Creator Page" />
+        </div>
+    </MudForm>
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" DisableElevation="true" OnClick="Test">Test</MudButton>
+    <MudPaper Class="alert-primary" Style="height: 300vh;">testtttt</MudPaper>
+@code {
+    private static string DEFAULT_ERROR = "THIS ITEM IS REQUIRED!";
+
+    bool success;
+    string[] errors = { };
+    MudForm form;
+    string showName;
+    string showDescription;
+    string creatorName;
+    string creatorDescription;
+    bool hideCreatorPage;
+
+    public async Task Test()
+    {
+        await form.Validate();
+        Snackbar.PrintSnackbar($"form is {form.IsValid}");
+    }
+
+}

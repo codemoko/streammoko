@@ -1,19 +1,35 @@
 ﻿@page "/"
+@using System.Text
 
-<MudButton Variant="Variant.Filled" OnClick="ProbeForEnvVar" Color="Color.Secondary">Secondary</MudButton>
-<p>@Result</p>
+@if (CloudflareImages != null)
+{
+    <Slider Slide="(new Objects.SliderObj(CloudflareImages))" />
+}
+@*<DropRule />*@
+
 @code {
-    private string Result { get; set; }
-    public void ProbeForEnvVar()
+    public CloudflareImagePage[] CloudflareImages { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        var tokenResult = await TokenProvider.RequestAccessToken(new AccessTokenRequestOptions { Scopes = new List<string> { "openid", "profile" } });
+        tokenResult.TryGetToken(out var token);
+        if (!string.IsNullOrEmpty(token?.Value))
         {
-            var key = "TESTING_THIS";
-            var resultDic = new Dictionary<string, string>();
-            foreach(EnvironmentVariableTarget target in Enum.GetValues(typeof(EnvironmentVariableTarget)))
+            var host = this.Http.BaseAddress.Host.Contains("localhost") ? "http://localhost:7071" : "https://mokowebhooks.azurewebsites.net";
+            var target = $"{host}/api/MokoWebHooks"; //dev
+            try
             {
-                resultDic.Add(target.ToString(), Environment.GetEnvironmentVariable(key, target));
+                var responseBody = JsonConvert.SerializeObject(new { Token = token.Value, MokoCommand = "IMGS" });
+                var byteContent = new ByteArrayContent(Encoding.UTF8.GetBytes(responseBody));
+                HttpResponseMessage reponse = await Http.PostAsync(target, byteContent);
+                var responseStr = await new StreamReader(reponse.Content.ReadAsStream()).ReadToEndAsync();
+                CloudflareImages = JsonConvert.DeserializeObject<CloudflareImagePage[]>(responseStr);
+                StateHasChanged();
             }
-            Result = JsonConvert.SerializeObject(resultDic);
+            catch (Exception ex)
+            {
+                var exMess = ex.Message;
+            }
         }
     }
-    
 }

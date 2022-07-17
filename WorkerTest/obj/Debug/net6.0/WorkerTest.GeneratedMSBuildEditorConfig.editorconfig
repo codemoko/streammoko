@@ -38,8 +38,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGxheWVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Desktop/stream-moko-core/WorkerTest/WorkerTest/Shared/AddChannelForm.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEFkZENoYW5uZWxGb3JtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Desktop/stream-moko-core/WorkerTest/WorkerTest/Shared/CloudflareImagesMgr.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENsb3VkZmxhcmVJbWFnZXNNZ3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Desktop/stream-moko-core/WorkerTest/WorkerTest/Shared/DropRule.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXERyb3BSdWxlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Desktop/stream-moko-core/WorkerTest/WorkerTest/Shared/ImageDialog.razor]
@@ -48,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Desktop/stream-moko-core/WorkerTest/WorkerTest/Shared/ImageSelection.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEltYWdlU2VsZWN0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Desktop/stream-moko-core/WorkerTest/WorkerTest/Shared/Logo.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ28ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Desktop/stream-moko-core/WorkerTest/WorkerTest/Shared/Slider.razor]

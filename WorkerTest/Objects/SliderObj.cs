@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using System.Text;
 namespace WorkerTest.Objects
 {
-    public class Slider
+    public class SliderObj
     {
         public string Name { get; set; } = "Default";
         public List<string> Links {  get
@@ -19,18 +19,18 @@ namespace WorkerTest.Objects
         public CloudflareImagePage[] Pages { get; set; }
         public int PagePosition { get; set; } = 0;
 
-        public Slider(){}
+        public SliderObj(){}
 
-        public Slider(CloudflareImagePage[] resultsPages)
+        public SliderObj(CloudflareImagePage[] resultsPages)
         {
             Pages = resultsPages;
         }
 
-        public static Slider DecodeSlider(string base64Str)
+        public static SliderObj DecodeSlider(string base64Str)
         {
             byte[] data = Convert.FromBase64String(base64Str);
             string decodedString = Encoding.UTF8.GetString(data);
-            return JsonConvert.DeserializeObject<Slider>(decodedString);
+            return JsonConvert.DeserializeObject<SliderObj>(decodedString);
         }        
     }
 }

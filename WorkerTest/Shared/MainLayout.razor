@@ -1,36 +1,50 @@
 ﻿@inherits LayoutComponentBase
 
-<MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme"/>
-<MudDialogProvider
-    FullWidth="true"
-    MaxWidth="MaxWidth.ExtraLarge"
-    CloseButton="true"
-    DisableBackdropClick="false"
-    Position="DialogPosition.Center"
-    CloseOnEscapeKey="true"
-/>
-<MudSnackbarProvider/>
+<MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme" />
+<MudDialogProvider FullWidth="true"
+                   MaxWidth="MaxWidth.ExtraLarge"
+                   CloseButton="true"
+                   DisableBackdropClick="false"
+                   Position="DialogPosition.Center"
+                   CloseOnEscapeKey="true" />
+<MudSnackbarProvider />
 
 <MudLayout>
-    <NavMenu Links="Links" />
+    <NavMenu Links="Links" ToggleDrawerCallback="() => {_drawerOpen = !_drawerOpen; StateHasChanged();}" />
+    <MudDrawer @bind-Open="@_drawerOpen" Elevation="2">
+        <MudDrawerHeader>
+            <Logo/>
+        </MudDrawerHeader>
+        <MudNavMenu>
+            <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Filled.PlaylistPlay">Library</MudNavLink>
+            <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Filled.Group">Community</MudNavLink>
+        </MudNavMenu>
+    </MudDrawer>
     <MudMainContent>
         @Body
     </MudMainContent>
 </MudLayout>
 
 @code {
-    private MudTheme _theme = new()
-    {
-        Typography = new Typography()
+    private MudTheme _theme = new MudTheme()
         {
-            Default = new Default()
+            Typography = new Typography()
             {
-                FontFamily = new []{"Arvo"}
-            }
-        }
-    };
+                Default = new Default()
+                {
+                    FontFamily = new[] { "Arvo" }
+                },
+            },
+        };
     bool _drawerOpen = false;
     bool _isDarkMode = true;
+
+    protected async override Task OnInitializedAsync()
+    {
+        _theme?.PaletteDark.Tertiary.HslChanged(new MudBlazor.Utilities.MudColor("#fff"));
+        StateHasChanged();
+        return;
+    }
 
     private List<string[]> Links = new List<string[]>
     {

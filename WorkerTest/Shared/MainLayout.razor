@@ -10,8 +10,8 @@
 <MudSnackbarProvider />
 
 <MudLayout>
-    <NavMenu Links="Links" ToggleDrawerCallback="() => {_drawerOpen = !_drawerOpen; StateHasChanged();}" />
-    <MudDrawer @bind-Open="@_drawerOpen" Elevation="2">
+   @* <NavMenu Links="Links" ToggleDrawerCallback="() => {_drawerOpen = !_drawerOpen; StateHasChanged();}" />*@
+    @*<MudDrawer @bind-Open="@_drawerOpen" Elevation="2">
         <MudDrawerHeader>
             <Logo/>
         </MudDrawerHeader>
@@ -22,7 +22,7 @@
     </MudDrawer>
     <MudMainContent>
         @Body
-    </MudMainContent>
+    </MudMainContent>*@
 </MudLayout>
 
 @code {

@@ -24,19 +24,17 @@
         <Authorized>
             @*<MudContainer Class="d-flex align-center">
                 <MudContainer Class=" align-self-center py-4 flex-1 mud-theme-primary">
-                    <MudAutocomplete Margin="Margin.None" T="string" Placeholder="Search"
-                        AdornmentIcon="@Icons.Material.Filled.Search" Adornment="Adornment.None" />
+                <MudAutocomplete Margin="Margin.None" T="string" Placeholder="Search"
+                AdornmentIcon="@Icons.Material.Filled.Search" Adornment="Adornment.None" />
                 </MudContainer>
-            </MudContainer>*@
+                </MudContainer>*@
             <MudStack Row="true">
-                <MudAutocomplete 
-                    SearchFunc="@SearchAsync" Immediate="true"
-                    ResetValueOnEmptyText="true" Style="top: -10px;" 
-                    Margin="Margin.None" T="string" Placeholder="Search"
-                    AdornmentIcon="@Icons.Material.Filled.Search" Adornment="Adornment.None"
-                    
-                    />
-                    </MudStack>
+                <MudAutocomplete SearchFunc="@SearchAsync" Immediate="true"
+                                 ResetValueOnEmptyText="true" Style="top: -10px; width: 300px;"
+                                 Margin="Margin.None" T="string" Placeholder="Search"
+                                 FullWidth="true"
+                                 AdornmentIcon="@Icons.Material.Filled.Search" Adornment="Adornment.None" />
+            </MudStack>
 
 
             @*<MudTooltip Duration="1000" Placement="Placement.Left">
@@ -75,9 +73,9 @@
         Navigation.NavigateTo("authentication/logout");
     }
 
-    
+
     private static string[] states =
-    {
+        {
         "Alabama", "Alaska", "American Samoa", "Arizona",
         "Arkansas", "California", "Colorado", "Connecticut",
         "Delaware", "District of Columbia", "Federated States of Micronesia",
@@ -102,7 +100,7 @@
         // if text is null or empty, show complete list
         if (string.IsNullOrEmpty(value))
         {
-            return new string[]{};
+            return new string[] { };
         }
 
         return states.Where(x => x.Contains(value, StringComparison.InvariantCultureIgnoreCase));
